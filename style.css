@@ -1,0 +1,586 @@
+/* Premium Light Typography System Tokens */
+:root {
+    --bg-main: #f8fafc;        /* Soft crisp white */
+    --bg-card: #ffffff;        /* Pure solid white */
+    --text-heading: #0f172a;   /* Clean deep dark slate */
+    --text-body: #475569;      /* Highly readable slate gray */
+    --text-muted: #64748b;     /* Lighter gray for helpers */
+    
+    /* Elegant Accents Extracted directly from your Logo */
+    --brand-blue: #1d72f2;
+    --brand-teal: #00d2ff;
+    --brand-purple: #7b2cbf;
+    
+    --border-light: #e2e8f0;   /* Ultra clean separator line */
+    --border-focus: #cbd5e1;
+    
+    --font-head: 'Lexend', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* Base Configuration */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-head);
+    color: var(--text-heading);
+    font-weight: 700;
+}
+
+/* Strategic Section Tagging */
+.section-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--brand-blue);
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* Corporate Navigation System */
+header {
+    background: rgba(248, 250, 252, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-wrapper img {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.logo-text {
+    font-family: var(--font-head);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-heading);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.nav-menu a {
+    color: var(--text-body);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--brand-blue);
+}
+
+.nav-menu .nav-cta {
+    background-color: var(--text-heading);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-menu .nav-cta:hover {
+    background-color: var(--brand-blue);
+    transform: translateY(-1px);
+}
+
+/* Premium Corporate Hero Space */
+.hero-section {
+    padding-top: 180px;
+    padding-bottom: 100px;
+    background: radial-gradient(circle at 90% 10%, rgba(0, 210, 255, 0.04), transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(123, 44, 191, 0.03), transparent 40%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.badge {
+    background-color: #ffffff;
+    border: 1px solid var(--border-light);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    display: inline-block;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-blue);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-body);
+    margin-bottom: 36px;
+    max-width: 580px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(29, 114, 242, 0.25);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #155ecb;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--text-heading);
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #edf2f7;
+}
+
+/* Minimal Mock Data Graphic Component */
+.hero-graphics {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dashboard-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 28px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.indicator {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    background-color: #e2fbe8;
+    color: #1e7e34;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.metric-value {
+    font-family: var(--font-head);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.progress-bar-wrapper {
+    height: 6px;
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 78%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+}
+
+/* High-End Clean Services Section Layout */
+.services-section {
+    padding: 100px 0;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.section-lead {
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.section-lead h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.section-lead p {
+    font-size: 1.1rem;
+    color: var(--text-body);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 40px 32px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+}
+
+/* Isolated Mini Colors for Brand Identity alignment */
+.icon-box-blue, .icon-box-teal, .icon-box-purple {
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+}
+.icon-box-blue { background: rgba(29, 114, 242, 0.08); color: var(--brand-blue); }
+.icon-box-teal { background: rgba(0, 210, 255, 0.1); color: #0099bc; }
+.icon-box-purple { background: rgba(123, 44, 191, 0.08); color: var(--brand-purple); }
+
+.service-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-body);
+}
+
+/* Balanced Corporate Trust Section */
+.trust-section {
+    padding: 100px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+}
+
+.trust-left h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.trust-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.trust-point {
+    display: flex;
+    gap: 24px;
+}
+
+.trust-point .point-num {
+    font-family: var(--font-head);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    background-color: white;
+    border: 1px solid var(--border-light);
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trust-point h4 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.trust-point p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Premium Business Consultation Interface */
+.contact-section {
+    padding-bottom: 100px;
+}
+
+.contact-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.02);
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 48px auto;
+}
+
+.contact-header h2 {
+    font-size: 2.3rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.contact-header p {
+    color: var(--text-muted);
+}
+
+.corporate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-heading);
+}
+
+.corporate-form input, .corporate-form textarea {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-light);
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-heading);
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.corporate-form input:focus, .corporate-form textarea:focus {
+    border-color: var(--brand-blue);
+    background-color: #ffffff;
+}
+
+.submit-btn {
+    background-color: var(--text-heading);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+    margin-top: 12px;
+}
+
+.submit-btn:hover {
+    background-color: var(--brand-blue);
+}
+
+/* Balanced Business Footer Layout */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-light);
+    padding: 48px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--brand-blue);
+}
+
+/* Fluid Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .hero-grid, .trust-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-graphics {
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Desktop menu hidden for mobile design simplicity */
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .contact-box {
+        padding: 30px 20px;
+    }
+    .hero-actions {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary {
+        text-align: center;
+    }
+}
